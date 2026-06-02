@@ -103,10 +103,14 @@ function updatedashboard(data) {
         let minutes = String(cityTime.getMinutes()).padStart(2, '0');
         let seconds = String(cityTime.getSeconds()).padStart(2, '0');
 
-        localTimeDisplay.innerText = `Local Time: ${hours}:${minutes}:${seconds}`;
+        let day = String(cityTime.getDate()).padStart(2, '0');
+        let month = String(cityTime.getMonth() + 1).padStart(2, '0');
+        let year = String(cityTime.getFullYear());
+
+        localTimeDisplay.innerText = `Date : ${day}:${month}:${year} \n Local Time: ${hours}:${minutes}:${seconds}`;
     }
 
     updateClock();
 
-    clockInterval = setInterval(updateClock, 1000);
+    clock = setInterval(updateClock, 1000);
 }
