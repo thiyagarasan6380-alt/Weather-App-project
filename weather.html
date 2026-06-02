@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Weather app</title>
+    <link rel="stylesheet" href="weather.css">
+    <link rel="icon" type="image/png" href="Weather icon.jpeg">
+</head>
+
+<body>
+    <div class="weather-dashboard">
+        <div class="left-panel">
+            <div class="Weather-div1">
+                <input type="text" id="cityname" placeholder="Enter city name...">
+                <button id="search">Search</button>
+            </div>
+
+            <div class="main-weather-stats">
+                <p id="weather-icon">⛈️</p>
+                <p id="weather-humidity">Humidity :</p>
+                <p id="weather-speed">Speed :</p>
+                <p id="weather-thermalsensation">Thermal-Sensation :</p>
+                <p id="weather-pressure">Pressure :</p>
+                <p id="weather-cloudliness">Cloudiness :</p>
+                <p id="weather-visibilty">Visibilty :</p>
+            </div>
+        </div>
+
+        <div class="right-panel" id="dynamic-bg">
+            <div class="condition-overlay">
+                <p class="forecast-title">Weather Condition</p>
+                <h2 id="weather-climate">Thunderstorm</h2>
+                <h1 id="weather-temp">25°C</h1>
+                <p id="weather-timezone">00:00:00</p>
+                <h2 id="weather-place">California, United States</h2>
+            </div>
+        </div>
+    </div>
+
+    <script src="weather.js"></script>
+</body>
+
+</html>
