@@ -26,6 +26,10 @@ async function checkweather(cityName) {
 
     let response = await fetch(apiUrl);
 
+    if (!response.ok) {
+        alert("Location not found! Please enter valid city name.");
+        return;
+    }
     let data = await response.json();
     updatedashboard(data);
 

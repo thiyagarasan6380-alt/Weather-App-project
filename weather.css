@@ -147,11 +147,11 @@ button:hover {
 #weather-timezone {
     font-size: 16px;
     font-weight: 600;
-    color: #c084fc;
+    color: rgba(255, 255, 255, 0.85);
     margin: 5px 0 15px 0;
     letter-spacing: 1px;
     text-transform: uppercase;
-    text-shadow: 0 0 10px rgba(168, 85, 247, 0.6);
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.85);
 }
 
 #weather-icon {
@@ -196,7 +196,7 @@ button:hover {
     gap: 15px;
     gap: 2px;
     background: rgba(255, 255, 255, 0.05);
-    border: 1px solid rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.3);
     backdrop-filter: blur(15px);
     -webkit-backdrop-filter: blur(15px);
     box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.25);
