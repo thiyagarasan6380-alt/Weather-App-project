@@ -111,7 +111,7 @@ function updatedashboard(data) {
         let month = String(cityTime.getMonth() + 1).padStart(2, '0');
         let year = String(cityTime.getFullYear());
 
-        localTimeDisplay.innerText = `Date : ${day}:${month}:${year} \n Local Time: ${hours}:${minutes}:${seconds}`;
+        localTimeDisplay.innerText = `Date : ${day}:${month}:${year} \n \nLocal Time: ${hours}:${minutes}:${seconds}`;
     }
 
     updateClock();
