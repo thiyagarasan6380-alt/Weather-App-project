@@ -69,24 +69,39 @@ function updatedashboard(data) {
     visibility.innerText = "Visibility 👁️ : " + (data.visibility / 1000) + " Km";
 
 
-    let condition = data.weather[0].main;
+    let condition = data.weather[0].main.toLowerCase();
 
-    if (condition === "Clouds") {
+    let skyTop = "#3a86ff";
+    let skyBottom = "#8ec5fc";
+
+    if (condition === "clouds") {
         icon.innerText = "☁️";
+        skyTop = "#778ca3";
+        skyBottom = "#d1d8e0";
         dynamicBg.style.backgroundImage = "linear-gradient(rgba(0,0,0,0.2), rgba(15,6,26,0.85)), url('https://images.unsplash.com/photo-1534088568595-a066f410bcda?q=80&w=1000')";
-    } else if (condition === "Clear") {
+    } else if (condition === "clear") {
         icon.innerText = "☀️";
+        skyTop = "#2196f3";
+        skyBottom = "#a6dcef";
         dynamicBg.style.backgroundImage = "linear-gradient(rgba(0,0,0,0.1), rgba(15,6,26,0.85)), url('https://images.unsplash.com/photo-1504608524841-42fe6f032b4b?q=80&w=1000')";
-    } else if (condition === "Rain") {
+    } else if (condition === "rain") {
         icon.innerText = "🌧️";
+        skyTop = "#3b5998";
+        skyBottom = "#4b6584";
         dynamicBg.style.backgroundImage = "linear-gradient(rgba(0,0,0,0.2), rgba(15,6,26,0.85)), url('https://images.unsplash.com/photo-1515694346937-94d85e41e6f0?q=80&w=1000')";
-    } else if (condition === "Thunderstorm") {
+    } else if (condition === "thunderstorm") {
         icon.innerText = "⛈️";
+        skyTop = "#3b5998";
+        skyBottom = "#4b6584";
         dynamicBg.style.backgroundImage = "linear-gradient(rgba(0,0,0,0.1), rgba(15,6,26,0.85)), url('https://images.unsplash.com/photo-1605721911519-3dfeb3be25e7?q=80&w=1000')";
-    } else if (condition === "Haze" || condition === "Mist") {
+    } else if (condition === "haze" || condition === "mist") {
         icon.innerText = "🌫️";
+        skyTop = "#95afc0";
+        skyBottom = "#dff9fb"
         dynamicBg.style.backgroundImage = "linear-gradient(rgba(0,0,0,0.2), rgba(15,6,26,0.85)), url('https://images.unsplash.com/photo-1485236715568-ddc5ee6ca227?q=80&w=1200')";
     }
+    document.body.style.setProperty('--sky-top', skyTop);
+    document.body.style.setProperty('--sky-bottom', skyBottom);
 
     //Clock Engine//
 
